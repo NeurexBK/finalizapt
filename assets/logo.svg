@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 196" fill="#2A2E35">
+  <!-- Icone: tres edificios sobre o telhado -->
+  <path d="M10 118 L100 72 L190 118 L190 130 L100 84 L10 130 Z"/>
+  <path d="M46 104 L46 62 L68 55 L68 94 Z"/>
+  <path d="M72 92 L72 53.7 L78 51.8 L78 89 Z"/>
+  <path d="M88 88 L88 26 L108 21.3 L108 78 Z"/>
+  <path d="M112 82 L112 20.4 L122 18 L122 86 Z"/>
+  <path d="M126 92 L126 56 L132 58 L132 94 Z"/>
+  <path d="M136 96 L136 59.3 L158 66.5 L158 108 Z"/>
+  <!-- Texto -->
+  <text x="100" y="166" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-weight="800" font-size="34" letter-spacing="2">FINALIZA</text>
+  <text x="100" y="186" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-weight="600" font-size="12" letter-spacing="5">UNIPESSOAL, LDA</text>
+</svg>

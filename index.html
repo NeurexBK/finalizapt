@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finaliza Unipessoal | Construção Civil e Remodelação de Apartamentos em todo o Portugal</title>
+<meta name="description" content="Empresa familiar de construção civil especializada em remodelação de apartamentos. Qualidade de 40 anos de ofício, em qualquer lugar ou região de Portugal. Peça o seu orçamento gratuito por WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='38' fill='%230B0B0D'/%3E%3Cg fill='%23ffffff' transform='translate(0 26)'%3E%3Cpath d='M10 118 L100 72 L190 118 L190 130 L100 84 L10 130 Z'/%3E%3Cpath d='M46 104 L46 62 L68 55 L68 94 Z'/%3E%3Cpath d='M72 92 L72 53.7 L78 51.8 L78 89 Z'/%3E%3Cpath d='M88 88 L88 26 L108 21.3 L108 78 Z'/%3E%3Cpath d='M112 82 L112 20.4 L122 18 L122 86 Z'/%3E%3Cpath d='M126 92 L126 56 L132 58 L132 94 Z'/%3E%3Cpath d='M136 96 L136 59.3 L158 66.5 L158 108 Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   FINALIZA, Construção Civil
+   Paleta: preto, branco, vermelho
+   ============================================================ */
+:root{
+  --black:#0B0B0D;
+  --ink:#141417;
+  --ink-2:#1C1C21;
+  --white:#FFFFFF;
+  --paper:#F6F6F4;
+  --line:#E7E7E3;
+  --line-dark:rgba(255,255,255,.12);
+  --red:#E11D2E;
+  --red-dark:#B31121;
+  --grey:#6B6B70;
+  --grey-light:#A5A5AC;
+  --radius:14px;
+  --shadow:0 20px 60px rgba(11,11,13,.10);
+  --font-head:"Sora",sans-serif;
+  --font-body:"Inter",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:var(--white);
+  color:var(--ink);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--red);color:var(--white)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer}
+
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
+
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--red);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--red)}
+
+.section{padding:110px 0}
+.section-head{max-width:640px;margin-bottom:56px}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);letter-spacing:-.02em}
+.section-head p{margin-top:16px;color:var(--grey);font-size:1.05rem}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px 30px;border-radius:999px;border:none;
+  font-family:var(--font-head);font-weight:600;font-size:.95rem;
+  transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn svg{width:19px;height:19px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:var(--red-dark)}
+.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.35)}
+.btn-outline:hover{border-color:var(--white)}
+.btn-dark{background:var(--black);color:var(--white)}
+.btn-dark:hover{background:var(--ink-2)}
+
+/* ---------- Animações de entrada ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none !important}
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:110;
+  transition:background .3s ease,box-shadow .3s ease;
+}
+.nav.scrolled{background:rgba(11,11,13,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line-dark)}
+.nav-inner{
+  max-width:1180px;margin:0 auto;padding:0 24px;
+  height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+/* Logotipo oficial recriado em vetor (versao com texto em assets/logo.svg) */
+.logo{display:flex;align-items:center;gap:12px;color:var(--white)}
+.logo-icon{width:44px;height:auto;flex:none}
+.logo-text{display:flex;flex-direction:column;line-height:1;font-family:var(--font-head)}
+.logo-text b{font-size:1.14rem;font-weight:800;letter-spacing:.06em}
+.logo-text small{margin-top:4px;font-size:.5rem;font-weight:600;letter-spacing:.22em;color:var(--grey-light);text-transform:uppercase;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{color:rgba(255,255,255,.75);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--red);color:var(--white);
+  padding:11px 22px;border-radius:999px;
+  font-family:var(--font-head);font-weight:600;font-size:.88rem;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--red-dark)}
+.nav-cta svg{width:17px;height:17px}
+
+.nav-toggle{display:none;background:none;border:none;width:44px;height:44px;position:relative;z-index:110}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);margin:6px auto;transition:transform .3s,opacity .3s}
+.nav-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;inset:0;z-index:105;background:var(--black);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{color:var(--white);font-family:var(--font-head);font-size:1.5rem;font-weight:600}
+.mobile-menu a:hover{color:var(--red)}
+
+@media (max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .nav-toggle{display:block}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;background:var(--black);color:var(--white);
+  padding:190px 0 120px;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 70% at 60% 20%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 20%,#000 30%,transparent 75%);
+}
+.hero::after{
+  content:"";position:absolute;top:-220px;right:-160px;width:560px;height:560px;border-radius:50%;
+  background:radial-gradient(circle,rgba(225,29,46,.22),transparent 65%);
+}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5vw,3.9rem);font-weight:800;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero-sub{margin-top:24px;font-size:1.12rem;color:var(--grey-light);max-width:520px}
+.hero-actions{margin-top:38px;display:flex;flex-wrap:wrap;gap:16px}
+.hero-note{margin-top:22px;font-size:.88rem;color:var(--grey-light);display:flex;align-items:center;gap:8px}
+.hero-note svg{width:16px;height:16px;color:var(--red);flex:none}
+
+.hero-stats{
+  margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--line-dark);
+}
+.hero-stat{padding:26px 22px 0;border-left:1px solid var(--line-dark)}
+.hero-stat:first-child{border-left:none;padding-left:0}
+.hero-stat b{display:block;font-family:var(--font-head);font-size:1.9rem;font-weight:800;letter-spacing:-.02em}
+.hero-stat b span{color:var(--red)}
+.hero-stat small{display:block;margin-top:4px;font-size:.85rem;color:var(--grey-light)}
+
+/* Cartão visual do hero: substituir o fundo por uma fotografia real de obra.
+   Exemplo: style="background:url('assets/obra-destaque.jpg') center/cover" */
+.hero-visual{position:relative}
+.hero-card{
+  position:relative;border-radius:20px;overflow:hidden;
+  background:linear-gradient(160deg,var(--ink-2),#101014);
+  border:1px solid var(--line-dark);
+  aspect-ratio:4/4.6;
+  display:flex;flex-direction:column;justify-content:flex-end;
+}
+.hero-card-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-card-body{position:relative;padding:26px;background:linear-gradient(transparent,rgba(11,11,13,.92) 55%)}
+.hero-card-tag{
+  display:inline-block;background:var(--red);color:var(--white);
+  font-family:var(--font-head);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:7px 14px;border-radius:999px;margin-bottom:14px;
+}
+.hero-card-body h3{font-size:1.25rem;font-weight:700}
+.hero-card-body p{margin-top:6px;font-size:.9rem;color:var(--grey-light)}
+.hero-badge{
+  position:absolute;left:-26px;bottom:56px;z-index:3;
+  background:var(--white);color:var(--ink);border-radius:16px;box-shadow:var(--shadow);
+  padding:16px 20px;display:flex;align-items:center;gap:14px;
+}
+.hero-badge-icon{width:44px;height:44px;border-radius:12px;background:var(--red);display:flex;align-items:center;justify-content:center;flex:none}
+.hero-badge-icon svg{width:22px;height:22px;color:var(--white)}
+.hero-badge b{display:block;font-family:var(--font-head);font-size:.95rem}
+.hero-badge small{color:var(--grey);font-size:.8rem}
+
+@media (max-width:900px){
+  .hero{padding:150px 0 90px}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .hero-badge{left:12px;bottom:-24px}
+  .hero-stats{grid-template-columns:1fr;border-top:none}
+  .hero-stat{border-left:none;border-top:1px solid var(--line-dark);padding:20px 0 0}
+  .hero-stat:first-child{border-top:none;padding-top:0}
+}
+
+/* ============================================================
+   FAIXA MARQUEE
+   ============================================================ */
+.marquee{background:var(--red);color:var(--white);overflow:hidden;padding:18px 0}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marquee 30s linear infinite}
+.marquee-item{
+  display:flex;align-items:center;gap:26px;padding-right:26px;
+  font-family:var(--font-head);font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;
+}
+.marquee-item::after{content:"";width:8px;height:8px;background:var(--white);border-radius:50%;opacity:.6}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============================================================
+   SOBRE
+   ============================================================ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-text h2{font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:-.02em}
+.about-text p{margin-top:20px;color:var(--grey);font-size:1.03rem}
+.about-text strong{color:var(--ink)}
+.about-quote{
+  margin-top:30px;padding:22px 26px;border-left:3px solid var(--red);
+  background:var(--paper);border-radius:0 var(--radius) var(--radius) 0;
+  font-family:var(--font-head);font-weight:600;font-size:1.05rem;color:var(--ink);
+}
+.about-values{display:grid;gap:18px}
+.value-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 28px;display:flex;gap:20px;align-items:flex-start;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:transparent}
+.value-icon{width:48px;height:48px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;flex:none}
+.value-icon svg{width:23px;height:23px;color:var(--red)}
+.value-card h3{font-size:1.05rem;margin-bottom:6px}
+.value-card p{color:var(--grey);font-size:.93rem}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:48px}}
+
+/* ============================================================
+   SERVIÇOS
+   ============================================================ */
+.services{background:var(--paper)}
+.service-featured{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  background:var(--black);color:var(--white);border-radius:20px;overflow:hidden;
+  margin-bottom:26px;
+}
+.service-featured-body{padding:52px 56px;display:flex;flex-direction:column;justify-content:center}
+.service-featured-tag{
+  align-self:flex-start;background:var(--red);color:var(--white);
+  font-family:var(--font-head);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:7px 14px;border-radius:999px;margin-bottom:20px;
+}
+.service-featured-body h3{font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.02em}
+.service-featured-body p{margin-top:16px;color:var(--grey-light);font-size:1rem;max-width:460px}
+.service-featured-list{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.service-featured-list li{display:flex;align-items:center;gap:10px;font-size:.92rem;color:rgba(255,255,255,.85)}
+.service-featured-list svg{width:16px;height:16px;color:var(--red);flex:none}
+.service-featured-body .btn{margin-top:32px;align-self:flex-start}
+/* Substituir esta área por fotografia real de remodelação concluída */
+.service-featured-visual{position:relative;min-height:340px;background:linear-gradient(150deg,#1A1A1F,#121216)}
+.service-featured-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.service-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 26px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+.service-icon{width:50px;height:50px;border-radius:12px;background:var(--paper);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .25s ease}
+.service-card:hover .service-icon{background:var(--red)}
+.service-icon svg{width:24px;height:24px;color:var(--ink);transition:color .25s ease}
+.service-card:hover .service-icon svg{color:var(--white)}
+.service-card h3{font-size:1.02rem;margin-bottom:8px}
+.service-card p{font-size:.88rem;color:var(--grey)}
+.services-note{
+  margin-top:40px;text-align:center;color:var(--grey);font-size:.98rem;
+}
+.services-note strong{color:var(--ink)}
+@media (max-width:1000px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){
+  .service-featured{grid-template-columns:1fr}
+  .service-featured-body{padding:38px 30px}
+  .service-featured-visual{min-height:220px}
+}
+@media (max-width:540px){.services-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   PROCESSO
+   ============================================================ */
+.process{background:var(--black);color:var(--white)}
+.process .section-head p{color:var(--grey-light)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.process-step{
+  position:relative;border:1px solid var(--line-dark);border-radius:var(--radius);
+  padding:34px 28px;background:var(--ink);
+  transition:transform .25s ease,border-color .25s ease;
+}
+.process-step:hover{transform:translateY(-5px);border-color:rgba(225,29,46,.55)}
+.process-num{
+  font-family:var(--font-head);font-weight:800;font-size:2.6rem;color:transparent;
+  -webkit-text-stroke:1.5px var(--red);letter-spacing:-.02em;line-height:1;
+}
+.process-step h3{margin-top:18px;font-size:1.05rem}
+.process-step p{margin-top:10px;font-size:.9rem;color:var(--grey-light)}
+@media (max-width:1000px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.process-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   ÁREAS DE ATUAÇÃO
+   ============================================================ */
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.area-card{
+  position:relative;border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 30px;overflow:hidden;background:var(--white);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.area-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.area-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.area-card:hover::before{transform:scaleX(1)}
+.area-pin{width:46px;height:46px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.area-pin svg{width:22px;height:22px;color:var(--red)}
+.area-card h3{font-size:1.2rem}
+.area-card p{margin-top:8px;font-size:.92rem;color:var(--grey)}
+.areas-extra{
+  margin-top:26px;display:flex;align-items:center;gap:16px;
+  background:var(--paper);border-radius:var(--radius);padding:24px 30px;
+}
+.areas-extra svg{width:24px;height:24px;color:var(--red);flex:none}
+.areas-extra p{font-size:.98rem;color:var(--grey)}
+.areas-extra strong{color:var(--ink)}
+@media (max-width:900px){.areas-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   PORTFÓLIO
+   ============================================================ */
+.portfolio{background:var(--paper)}
+.portfolio-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.portfolio-head .section-head{margin-bottom:0}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+/* Cada .work-item deve receber uma fotografia real dos trabalhos publicados no Facebook.
+   Exemplo: <div class="work-item"><img src="assets/obra-01.jpg" alt="Remodelação de cozinha em Lisboa"> ... */
+.work-item{
+  position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;
+  background:linear-gradient(150deg,#1E1E23,#121215);
+  display:flex;align-items:flex-end;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.work-item:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.work-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.work-item:hover .work-photo{transform:scale(1.06)}
+.work-label{position:relative;z-index:2;width:100%;padding:20px 22px;background:linear-gradient(transparent,rgba(11,11,13,.9))}
+.work-label b{display:block;color:var(--white);font-family:var(--font-head);font-size:.98rem}
+.work-label small{color:var(--grey-light);font-size:.8rem}
+.work-tag{
+  position:absolute;top:16px;left:16px;z-index:2;
+  background:rgba(11,11,13,.55);backdrop-filter:blur(6px);color:var(--white);
+  font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  padding:6px 12px;border-radius:999px;
+}
+@media (max-width:900px){.portfolio-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.portfolio-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   TESTEMUNHOS
+   ============================================================ */
+.testimonials{background:var(--black);color:var(--white)}
+.testimonials .section-head p{color:var(--grey-light)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testimonial-card{
+  border:1px solid var(--line-dark);border-radius:var(--radius);padding:34px 30px;background:var(--ink);
+  display:flex;flex-direction:column;gap:22px;
+  transition:transform .25s ease,border-color .25s ease;
+}
+.testimonial-card:hover{transform:translateY(-5px);border-color:rgba(225,29,46,.55)}
+.stars{display:flex;gap:4px}
+.stars svg{width:17px;height:17px;color:var(--red)}
+.testimonial-card blockquote{font-size:.96rem;color:rgba(255,255,255,.85);flex:1}
+.testimonial-author b{display:block;font-family:var(--font-head);font-size:.95rem}
+.testimonial-author small{color:var(--grey-light);font-size:.82rem}
+.testimonials-cta{margin-top:44px;text-align:center}
+.testimonials-cta p{color:var(--grey-light);margin-bottom:20px;font-size:.95rem}
+@media (max-width:900px){.testimonials-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   ORÇAMENTO
+   ============================================================ */
+.quote-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.quote-info h2{font-size:clamp(1.9rem,3.6vw,2.6rem);letter-spacing:-.02em}
+.quote-info>p{margin-top:18px;color:var(--grey);font-size:1.03rem}
+.quote-steps{margin-top:34px;display:grid;gap:16px}
+.quote-step{display:flex;gap:16px;align-items:flex-start}
+.quote-step-num{
+  width:34px;height:34px;border-radius:50%;background:var(--black);color:var(--white);
+  font-family:var(--font-head);font-weight:700;font-size:.85rem;
+  display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px;
+}
+.quote-step p{font-size:.95rem;color:var(--grey)}
+.quote-step strong{color:var(--ink)}
+.quote-direct{
+  margin-top:38px;padding:26px 28px;background:var(--black);color:var(--white);border-radius:var(--radius);
+}
+.quote-direct b{font-family:var(--font-head);display:block;margin-bottom:6px}
+.quote-direct p{font-size:.9rem;color:var(--grey-light)}
+.quote-direct a{color:var(--red);font-weight:600}
+.quote-direct a:hover{text-decoration:underline}
+
+.quote-form{
+  background:var(--white);border:1px solid var(--line);border-radius:20px;
+  padding:44px;box-shadow:var(--shadow);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-weight:600;font-size:.88rem;margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;
+  font-family:inherit;font-size:.95rem;color:var(--ink);background:var(--white);
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(225,29,46,.12);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.quote-form .btn{width:100%;margin-top:6px}
+.form-note{margin-top:16px;text-align:center;font-size:.82rem;color:var(--grey)}
+@media (max-width:900px){
+  .quote-grid{grid-template-columns:1fr;gap:48px}
+  .quote-form{padding:30px 24px}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* ============================================================
+   CONTACTOS
+   ============================================================ */
+.contacts{background:var(--paper)}
+.contacts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:22px}
+.contact-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 30px;transition:transform .25s ease,box-shadow .25s ease;
+}
+.contact-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.contact-card-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.contact-icon{width:48px;height:48px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;flex:none}
+.contact-icon svg{width:23px;height:23px;color:var(--red)}
+.contact-card h3{font-size:1.08rem}
+.contact-card-head small{display:block;color:var(--grey);font-size:.82rem}
+.contact-card p{color:var(--grey);font-size:.92rem;margin-bottom:18px}
+.contact-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-head);font-weight:600;font-size:.93rem;color:var(--red);
+}
+.contact-link:hover{text-decoration:underline}
+.contact-link svg{width:17px;height:17px}
+.contacts-row{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:900px){.contacts-grid,.contacts-row{grid-template-columns:1fr}}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:var(--black);color:var(--white);padding:80px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px}
+.footer-brand p{margin-top:18px;color:var(--grey-light);font-size:.92rem;max-width:300px}
+.footer-social{margin-top:24px;display:flex;gap:12px}
+.footer-social a{
+  width:42px;height:42px;border-radius:10px;border:1px solid var(--line-dark);
+  display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;
+}
+.footer-social a:hover{background:var(--red);border-color:var(--red)}
+.footer-social svg{width:19px;height:19px;color:var(--white)}
+.footer h4{font-size:.95rem;margin-bottom:20px;letter-spacing:.04em}
+.footer-col ul{display:grid;gap:12px}
+.footer-col a,.footer-col li{color:var(--grey-light);font-size:.9rem;transition:color .2s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{
+  border-top:1px solid var(--line-dark);padding:26px 0;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.footer-bottom p{font-size:.82rem;color:var(--grey-light)}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.footer-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   BOTÃO FLUTUANTE WHATSAPP
+   ============================================================ */
+.wa-float{
+  position:fixed;right:22px;bottom:22px;z-index:90;
+  display:flex;align-items:center;gap:12px;
+  background:#25D366;color:var(--white);
+  padding:14px 22px 14px 16px;border-radius:999px;
+  font-family:var(--font-head);font-weight:600;font-size:.92rem;
+  box-shadow:0 12px 34px rgba(37,211,102,.4);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(37,211,102,.5)}
+.wa-float svg{width:24px;height:24px;flex:none}
+@media (max-width:540px){
+  .wa-float span{display:none}
+  .wa-float{padding:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     CONFIGURAÇÃO RÁPIDA
+     Os números de WhatsApp e as redes sociais editam-se num único
+     sítio: o bloco CONFIG no <script> no fim desta página.
+     ============================================================ -->
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#inicio" class="logo" aria-label="Finaliza Unipessoal, página inicial">
+      <svg class="logo-icon" viewBox="0 10 200 122" fill="currentColor" aria-hidden="true">
+        <path d="M10 118 L100 72 L190 118 L190 130 L100 84 L10 130 Z"/>
+        <path d="M46 104 L46 62 L68 55 L68 94 Z"/>
+        <path d="M72 92 L72 53.7 L78 51.8 L78 89 Z"/>
+        <path d="M88 88 L88 26 L108 21.3 L108 78 Z"/>
+        <path d="M112 82 L112 20.4 L122 18 L122 86 Z"/>
+        <path d="M126 92 L126 56 L132 58 L132 94 Z"/>
+        <path d="M136 96 L136 59.3 L158 66.5 L158 108 Z"/>
+      </svg>
+      <span class="logo-text"><b>FINALIZA</b><small>Unipessoal, Lda</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#areas">Áreas</a>
+      <a href="#portfolio">Trabalhos</a>
+      <a href="#testemunhos">Clientes</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+    <a class="nav-cta" data-wa="admin" data-wa-msg="Olá, gostaria de pedir um orçamento.">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+      Pedir Orçamento
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#areas">Áreas</a>
+  <a href="#portfolio">Trabalhos</a>
+  <a href="#testemunhos">Clientes</a>
+  <a href="#contactos">Contactos</a>
+  <a href="#orcamento" style="color:var(--red)">Pedir Orçamento</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal">Construção Civil e Remodelações</span>
+        <h1 class="reveal reveal-d1">A sua nova casa merece uma obra <em>bem feita</em>.</h1>
+        <p class="hero-sub reveal reveal-d2">Somos uma empresa familiar de construção civil especializada em remodelação de apartamentos. Juntamos 40 anos de ofício em obra com uma gestão jovem e próxima, para entregar casas onde apetece viver, em qualquer região de Portugal.</p>
+        <div class="hero-actions reveal reveal-d3">
+          <a class="btn btn-red" data-wa="admin" data-wa-msg="Olá, gostaria de pedir um orçamento para uma obra.">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+            Pedir Orçamento Gratuito
+          </a>
+          <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+        </div>
+        <p class="hero-note reveal reveal-d3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Resposta rápida por WhatsApp, sem compromisso
+        </p>
+        <div class="hero-stats reveal">
+          <div class="hero-stat"><b>40<span>+</span></b><small>anos de experiência em obra</small></div>
+          <div class="hero-stat"><b>Todo <span>o país</span></b><small>deslocamo-nos a qualquer região</small></div>
+          <div class="hero-stat"><b>100<span>%</span></b><small>acompanhamento direto e familiar</small></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-d2">
+        <!-- Fotografia de banco de imagens (Unsplash, uso livre). Pode ser trocada
+             por uma fotografia real de obra: basta substituir assets/hero.jpg -->
+        <div class="hero-card">
+          <img class="hero-card-art" src="assets/hero.jpg" alt="Preparação do projeto de uma remodelação">
+          <div class="hero-card-body">
+            <span class="hero-card-tag">Especialidade</span>
+            <h3>Remodelação de Apartamentos</h3>
+            <p>Do projeto aos acabamentos, uma equipa a tratar de tudo.</p>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div><b>Qualidade garantida</b><small>Obra acompanhada de perto</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span class="marquee-item">Remodelação de Apartamentos</span>
+    <span class="marquee-item">Cozinhas e Casas de Banho</span>
+    <span class="marquee-item">Pinturas e Acabamentos</span>
+    <span class="marquee-item">Pavimentos e Revestimentos</span>
+    <span class="marquee-item">Pladur e Tetos Falsos</span>
+    <span class="marquee-item">Canalização e Eletricidade</span>
+    <span class="marquee-item">Construção Civil</span>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">A nossa história</span>
+        <h2>De pai para filho, o mesmo compromisso com a obra bem feita.</h2>
+        <p>A Finaliza nasceu quando um pedreiro com <strong>40 anos de profissão</strong> desafiou o filho a administrar um novo negócio na área da construção civil. O resultado é uma empresa jovem, com um ano de atividade, mas construída sobre décadas de experiência real em obra.</p>
+        <p>A nossa equipa é formada por profissionais com vastos anos de ofício, que trabalham como sempre trabalharam: com rigor, brio e respeito pela casa de cada cliente.</p>
+        <p>Acreditamos que quem compra ou renova a sua primeira casa merece um parceiro de confiança, com <strong>preços acessíveis</strong> e um acompanhamento próximo do princípio ao fim.</p>
+        <div class="about-quote">Tratamos cada obra como se fosse a casa da nossa própria família.</div>
+      </div>
+      <div class="about-values">
+        <div class="value-card reveal">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h3>Compromisso com a qualidade</h3>
+            <p>Materiais bem aplicados, prazos respeitados e acabamentos verificados pelo mestre de obra em todas as fases.</p>
+          </div>
+        </div>
+        <div class="value-card reveal reveal-d1">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h3>Ambiente familiar</h3>
+            <p>Fala sempre com as mesmas pessoas. O administrador acompanha o seu pedido do primeiro contacto à entrega da obra.</p>
+          </div>
+        </div>
+        <div class="value-card reveal reveal-d2">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+          </div>
+          <div>
+            <h3>Acessível a quem começa</h3>
+            <p>Soluções pensadas para jovens que entram na sua primeira casa remodelada, com orçamentos claros e sem surpresas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section services" id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Serviços</span>
+      <h2>Toda a área da construção civil, num só parceiro.</h2>
+      <p>Trabalhamos para particulares e empresas, em obras completas ou intervenções pontuais.</p>
+    </div>
+
+    <div class="service-featured reveal">
+      <div class="service-featured-body">
+        <span class="service-featured-tag">Serviço em destaque</span>
+        <h3>Remodelação completa de apartamentos</h3>
+        <p>Transformamos apartamentos antigos em casas modernas e funcionais, prontas a habitar. Uma única equipa responsável por todas as especialidades, do início ao fim.</p>
+        <ul class="service-featured-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Demolições e alterações de espaços</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cozinhas e casas de banho novas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Redes de água e eletricidade</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pavimentos, paredes e tetos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Carpintarias e roupeiros</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pinturas e acabamentos finais</li>
+        </ul>
+        <a class="btn btn-red" data-wa="admin" data-wa-msg="Olá, gostaria de pedir um orçamento para a remodelação de um apartamento.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+          Quero remodelar o meu apartamento
+        </a>
+      </div>
+      <div class="service-featured-visual">
+        <!-- Fotografia de banco de imagens (Unsplash, uso livre); trocar por foto real quando existir -->
+        <img src="assets/destaque.jpg" alt="Sala e cozinha de apartamento remodelado em estilo moderno">
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Construção e ampliações</h3>
+        <p>Obras de raiz, ampliações e alterações estruturais para casas e empresas.</p>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3>Cozinhas e casas de banho</h3>
+        <p>Renovação completa com louças, móveis, azulejos e iluminação modernos.</p>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 3 5 17l-2 4 4-2L21 5z"/><path d="m15 7 2 2"/></svg>
+        </div>
+        <h3>Pinturas e acabamentos</h3>
+        <p>Pintura interior e exterior, barramentos e tratamento de paredes.</p>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 15h16"/><path d="M12 3v18"/></svg>
+        </div>
+        <h3>Pladur e tetos falsos</h3>
+        <p>Divisórias, sancas, isolamentos e correção de tetos e paredes.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 10h6M9 14h6"/></svg>
+        </div>
+        <h3>Pavimentos e revestimentos</h3>
+        <p>Aplicação de cerâmica, flutuante, vinílico e outros revestimentos.</p>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4"/><path d="M5 10a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z"/><path d="M9 21h6"/></svg>
+        </div>
+        <h3>Canalização</h3>
+        <p>Redes de águas e esgotos novas, reparações e substituições.</p>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+        </div>
+        <h3>Eletricidade</h3>
+        <p>Instalações elétricas novas, quadros, iluminação e certificações.</p>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3Z"/></svg>
+        </div>
+        <h3>Manutenção para empresas</h3>
+        <p>Pequenas obras, reparações e manutenção de lojas e escritórios.</p>
+      </div>
+    </div>
+
+    <p class="services-note reveal">Não encontra o que procura? Trabalhamos em <strong>toda a área da construção civil</strong>. Fale connosco e diga-nos o que precisa.</p>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="section process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Do primeiro contacto à entrega das chaves.</h2>
+      <p>Um processo simples e transparente, sempre com o administrador como o seu ponto de contacto direto.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="process-num">01</div>
+        <h3>Fale connosco</h3>
+        <p>Envie mensagem por WhatsApp ou preencha o formulário. O pedido chega diretamente ao administrador.</p>
+      </div>
+      <div class="process-step reveal reveal-d1">
+        <div class="process-num">02</div>
+        <h3>Visita e orçamento</h3>
+        <p>Visitamos o espaço, ouvimos as suas ideias e entregamos um orçamento gratuito, claro e sem surpresas.</p>
+      </div>
+      <div class="process-step reveal reveal-d2">
+        <div class="process-num">03</div>
+        <h3>Obra acompanhada</h3>
+        <p>A equipa executa e o mestre de obra, com 40 anos de experiência, verifica a qualidade em cada fase.</p>
+      </div>
+      <div class="process-step reveal reveal-d3">
+        <div class="process-num">04</div>
+        <h3>Entrega final</h3>
+        <p>Revisão de todos os detalhes consigo e entrega da obra pronta a usar. Ficamos disponíveis para o que precisar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÁREAS -->
+<section class="section" id="areas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Áreas de atuação</span>
+      <h2>Trabalhamos em todo o Portugal.</h2>
+      <p>Com bases em Lisboa, Alenquer e no Algarve, levamos a nossa equipa a qualquer lugar ou região do país.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card reveal">
+        <div class="area-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Lisboa</h3>
+        <p>Grande Lisboa e concelhos limítrofes, com foco na remodelação de apartamentos.</p>
+      </div>
+      <div class="area-card reveal reveal-d1">
+        <div class="area-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Alenquer</h3>
+        <p>Alenquer e região oeste, em obras de construção, remodelação e manutenção.</p>
+      </div>
+      <div class="area-card reveal reveal-d2">
+        <div class="area-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Algarve</h3>
+        <p>Remodelações e obras para habitação e alojamento em todo o Algarve.</p>
+      </div>
+    </div>
+    <div class="areas-extra reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="7" width="14" height="10" rx="2"/><path d="M15 10h4l4 4v3h-3"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></svg>
+      <p><strong>Deslocamo-nos a qualquer região de Portugal.</strong> De Leiria ao resto do país, do litoral ao interior, fale connosco sobre a localização da sua obra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-head">
+      <div class="section-head reveal">
+        <span class="eyebrow">O que fazemos</span>
+        <h2>Obras que falam por nós.</h2>
+        <p>Exemplos do tipo de obras que realizamos. Veja as fotografias e os vídeos dos nossos trabalhos na página de Facebook.</p>
+      </div>
+      <a class="btn btn-dark reveal" data-social="facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1a3.5 3.5 0 0 0-3.7 3.8V11H8.5v3h2.3v7Z"/></svg>
+        Ver no Facebook
+      </a>
+    </div>
+    <!-- Fotografias de banco de imagens (Unsplash, licença de uso livre).
+         Para usar fotografias reais dos trabalhos publicados no Facebook,
+         basta substituir os ficheiros em assets/obra-01.jpg a obra-06.jpg -->
+    <div class="portfolio-grid">
+      <div class="work-item reveal">
+        <img class="work-photo" src="assets/obra-01.jpg" alt="Sala de apartamento remodelado em estilo moderno" loading="lazy">
+        <span class="work-tag">Remodelação</span>
+        <div class="work-label"><b>Remodelação completa de apartamentos</b><small>Salas e espaços de estar</small></div>
+      </div>
+      <div class="work-item reveal reveal-d1">
+        <img class="work-photo" src="assets/obra-02.jpg" alt="Cozinha moderna em tons de branco e preto" loading="lazy">
+        <span class="work-tag">Cozinhas</span>
+        <div class="work-label"><b>Cozinhas modernas e funcionais</b><small>Móveis, bancadas e iluminação</small></div>
+      </div>
+      <div class="work-item reveal reveal-d2">
+        <img class="work-photo" src="assets/obra-03.jpg" alt="Casa de banho renovada com base de duche em vidro" loading="lazy">
+        <span class="work-tag">Casas de banho</span>
+        <div class="work-label"><b>Casas de banho renovadas</b><small>Louças, duche e revestimentos</small></div>
+      </div>
+      <div class="work-item reveal">
+        <img class="work-photo" src="assets/obra-04.jpg" alt="Moradia moderna com fachada em madeira e preto" loading="lazy">
+        <span class="work-tag">Moradias</span>
+        <div class="work-label"><b>Moradias e ampliações</b><small>Construção e alteração de fachadas</small></div>
+      </div>
+      <div class="work-item reveal reveal-d1">
+        <img class="work-photo" src="assets/obra-05.jpg" alt="Equipa de obra num estaleiro de construção" loading="lazy">
+        <span class="work-tag">Construção</span>
+        <div class="work-label"><b>Obra estrutural acompanhada</b><small>Equipa e segurança em obra</small></div>
+      </div>
+      <div class="work-item reveal reveal-d2">
+        <img class="work-photo" src="assets/obra-06.jpg" alt="Escritório renovado com divisórias em vidro" loading="lazy">
+        <span class="work-tag">Comercial</span>
+        <div class="work-label"><b>Espaços comerciais e escritórios</b><small>Renovação para empresas</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTEMUNHOS -->
+<section class="section testimonials" id="testemunhos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Clientes</span>
+      <h2>A confiança de quem já fez obra connosco.</h2>
+      <p>As avaliações reais dos nossos clientes estão disponíveis no nosso perfil do Fixando.</p>
+    </div>
+    <!-- IMPORTANTE: substituir os três testemunhos abaixo por avaliações reais,
+         copiadas do perfil do Fixando da empresa, com o nome e a localidade do cliente. -->
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars" aria-label="5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+        </div>
+        <blockquote>Espaço reservado para uma avaliação real de cliente. Copie aqui o texto do depoimento publicado no perfil do Fixando.</blockquote>
+        <div class="testimonial-author"><b>Nome do Cliente</b><small>Serviço realizado, Localidade</small></div>
+      </div>
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="stars" aria-label="5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+        </div>
+        <blockquote>Espaço reservado para uma avaliação real de cliente. Copie aqui o texto do depoimento publicado no perfil do Fixando.</blockquote>
+        <div class="testimonial-author"><b>Nome do Cliente</b><small>Serviço realizado, Localidade</small></div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="stars" aria-label="5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z"/></svg>
+        </div>
+        <blockquote>Espaço reservado para uma avaliação real de cliente. Copie aqui o texto do depoimento publicado no perfil do Fixando.</blockquote>
+        <div class="testimonial-author"><b>Nome do Cliente</b><small>Serviço realizado, Localidade</small></div>
+      </div>
+    </div>
+    <div class="testimonials-cta reveal">
+      <p>Quer confirmar? Consulte todas as avaliações no nosso perfil.</p>
+      <a class="btn btn-red" data-social="fixando" target="_blank" rel="noopener">Ver avaliações no Fixando</a>
+    </div>
+  </div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section class="section" id="orcamento">
+  <div class="container">
+    <div class="quote-grid">
+      <div class="quote-info reveal">
+        <span class="eyebrow">Orçamento gratuito</span>
+        <h2>Conte-nos o que quer construir ou renovar.</h2>
+        <p>Preencha o formulário e o seu pedido segue diretamente para o WhatsApp do administrador. Sem chamadas de espera, sem intermediários.</p>
+        <div class="quote-steps">
+          <div class="quote-step">
+            <div class="quote-step-num">1</div>
+            <p><strong>Descreva a sua obra.</strong> Quanto mais detalhe, mais rigoroso será o orçamento.</p>
+          </div>
+          <div class="quote-step">
+            <div class="quote-step-num">2</div>
+            <p><strong>Receba resposta rápida.</strong> Falamos consigo por WhatsApp para agendar a visita.</p>
+          </div>
+          <div class="quote-step">
+            <div class="quote-step-num">3</div>
+            <p><strong>Orçamento sem compromisso.</strong> Decida com calma, sem pressão e sem custos.</p>
+          </div>
+        </div>
+        <div class="quote-direct">
+          <b>Prefere falar já connosco?</b>
+          <p>Envie mensagem direta ao administrador pelo <a data-wa="admin" data-wa-msg="Olá, gostaria de falar sobre uma obra.">WhatsApp</a> ou escreva para <a href="mailto:finalizaunipessoal@gmail.com">finalizaunipessoal@gmail.com</a>.</p>
+        </div>
+      </div>
+      <form class="quote-form reveal reveal-d1" id="quoteForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fNome">Nome</label>
+            <input type="text" id="fNome" name="nome" placeholder="O seu nome" required>
+          </div>
+          <div class="form-group">
+            <label for="fTelefone">Telemóvel</label>
+            <input type="tel" id="fTelefone" name="telefone" placeholder="9XX XXX XXX" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fZona">Localização da obra</label>
+            <select id="fZona" name="zona" required>
+              <option value="" disabled selected>Escolha a zona</option>
+              <option>Lisboa</option>
+              <option>Alenquer</option>
+              <option>Algarve</option>
+              <option>Leiria</option>
+              <option>Outra zona</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fServico">Tipo de serviço</label>
+            <select id="fServico" name="servico" required>
+              <option value="" disabled selected>Escolha o serviço</option>
+              <option>Remodelação de apartamento</option>
+              <option>Cozinha ou casa de banho</option>
+              <option>Pinturas e acabamentos</option>
+              <option>Pladur e tetos falsos</option>
+              <option>Pavimentos e revestimentos</option>
+              <option>Canalização</option>
+              <option>Eletricidade</option>
+              <option>Construção ou ampliação</option>
+              <option>Manutenção para empresas</option>
+              <option>Outro serviço</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fMensagem">Descreva a obra</label>
+          <textarea id="fMensagem" name="mensagem" placeholder="Exemplo: quero remodelar um T2 em Lisboa, com cozinha e casa de banho novas." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-red">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+          Enviar pedido por WhatsApp
+        </button>
+        <p class="form-note">Ao enviar, abre o WhatsApp com a sua mensagem pronta a seguir para o administrador.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTOS -->
+<section class="section contacts" id="contactos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contactos</span>
+      <h2>Fale diretamente com quem decide.</h2>
+      <p>Sem centrais de atendimento. Fala com o administrador ou com o mestre de obra.</p>
+    </div>
+    <div class="contacts-grid">
+      <div class="contact-card reveal">
+        <div class="contact-card-head">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+          </div>
+          <div>
+            <h3>Administração</h3>
+            <small>Orçamentos, agendamentos e acompanhamento</small>
+          </div>
+        </div>
+        <p>O primeiro contacto para qualquer pedido. O administrador recebe a sua mensagem e acompanha todo o processo.</p>
+        <a class="contact-link" data-wa="admin" data-wa-msg="Olá, gostaria de falar com a administração sobre uma obra.">
+          <span data-wa-text="admin"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+      </div>
+      <div class="contact-card reveal reveal-d1">
+        <div class="contact-card-head">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18l3 3 5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3Z"/></svg>
+          </div>
+          <div>
+            <h3>Mestre de Obra</h3>
+            <small>Questões técnicas e visitas à obra</small>
+          </div>
+        </div>
+        <p>Para assuntos técnicos durante a obra, fale diretamente com o mestre de obra, com 40 anos de experiência.</p>
+        <a class="contact-link" data-wa="mestre" data-wa-msg="Olá, gostaria de esclarecer uma questão técnica sobre uma obra.">
+          <span data-wa-text="mestre"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="contacts-row">
+      <div class="contact-card reveal">
+        <div class="contact-card-head">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <small>Para pedidos formais e envio de documentos</small>
+          </div>
+        </div>
+        <a class="contact-link" href="mailto:finalizaunipessoal@gmail.com">
+          finalizaunipessoal@gmail.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+        </a>
+      </div>
+      <div class="contact-card reveal reveal-d1">
+        <div class="contact-card-head">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+          </div>
+          <div>
+            <h3>Redes sociais</h3>
+            <small>Acompanhe os nossos trabalhos</small>
+          </div>
+        </div>
+        <div style="display:flex;gap:22px;flex-wrap:wrap">
+          <a class="contact-link" data-social="facebook" target="_blank" rel="noopener">
+            Facebook
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+          </a>
+          <a class="contact-link" data-social="instagram" target="_blank" rel="noopener">
+            Instagram
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">
+          <svg class="logo-icon" viewBox="0 10 200 122" fill="currentColor" aria-hidden="true">
+            <path d="M10 118 L100 72 L190 118 L190 130 L100 84 L10 130 Z"/>
+            <path d="M46 104 L46 62 L68 55 L68 94 Z"/>
+            <path d="M72 92 L72 53.7 L78 51.8 L78 89 Z"/>
+            <path d="M88 88 L88 26 L108 21.3 L108 78 Z"/>
+            <path d="M112 82 L112 20.4 L122 18 L122 86 Z"/>
+            <path d="M126 92 L126 56 L132 58 L132 94 Z"/>
+            <path d="M136 96 L136 59.3 L158 66.5 L158 108 Z"/>
+          </svg>
+          <span class="logo-text"><b>FINALIZA</b><small>Unipessoal, Lda</small></span>
+        </a>
+        <p>Empresa familiar de construção civil. Qualidade de 40 anos de ofício, ao serviço da sua casa ou empresa.</p>
+        <div class="footer-social">
+          <a data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1a3.5 3.5 0 0 0-3.7 3.8V11H8.5v3h2.3v7Z"/></svg>
+          </a>
+          <a data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a data-wa="admin" data-wa-msg="Olá, encontrei o vosso site e gostaria de mais informações." aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Remodelação de apartamentos</a></li>
+          <li><a href="#servicos">Cozinhas e casas de banho</a></li>
+          <li><a href="#servicos">Pinturas e acabamentos</a></li>
+          <li><a href="#servicos">Construção e ampliações</a></li>
+          <li><a href="#servicos">Manutenção para empresas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li>Lisboa</li>
+          <li>Alenquer</li>
+          <li>Algarve</li>
+          <li>Todo o país, com deslocação</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contactos</h4>
+        <ul>
+          <li><a data-wa="admin" data-wa-msg="Olá, gostaria de mais informações."><span data-wa-text="admin"></span></a></li>
+          <li><a href="mailto:finalizaunipessoal@gmail.com">finalizaunipessoal@gmail.com</a></li>
+          <li><a href="#orcamento">Pedir orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Finaliza Unipessoal. Todos os direitos reservados.</p>
+      <p>Construção civil e remodelações em Portugal</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a class="wa-float" data-wa="admin" data-wa-msg="Olá, encontrei o vosso site e gostaria de pedir um orçamento." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12a9.9 9.9 0 0 0 1.5 5.2L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5a1.7 1.7 0 0 0 .3-.4.5.5 0 0 0 0-.4c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9 14.5 14.5 0 0 0 1.5.5 3.5 3.5 0 0 0 1.6.1 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></svg>
+  <span>Fale connosco</span>
+</a>
+
+<script>
+/* ============================================================
+   CONFIG: editar apenas este bloco.
+   Números no formato internacional, sem espaços e sem o sinal +.
+   Exemplo: 351912345678
+   ============================================================ */
+const CONFIG = {
+  whatsapp: {
+    admin:  "351966091330",  // administrador
+    mestre: "351933260845"   // mestre de obra (trocar com o de cima se estiver ao contrario)
+  },
+  social: {
+    facebook:  "https://www.facebook.com/",   // ALTERAR: link da pagina de Facebook
+    instagram: "https://www.instagram.com/",  // ALTERAR: link do perfil de Instagram
+    fixando:   "https://www.fixando.pt/"      // ALTERAR: link do perfil no Fixando
+  }
+};
+
+/* Formata 351912345678 como +351 912 345 678 */
+function formatPhone(num){
+  const n = num.replace(/\D/g,"");
+  if(n.startsWith("351") && n.length === 12){
+    return "+351 " + n.slice(3,6) + " " + n.slice(6,9) + " " + n.slice(9);
+  }
+  return "+" + n;
+}
+
+/* Liga todos os elementos data-wa ao WhatsApp correto */
+document.querySelectorAll("[data-wa]").forEach(el=>{
+  const who = el.getAttribute("data-wa");
+  const num = CONFIG.whatsapp[who];
+  if(!num) return;
+  const msg = el.getAttribute("data-wa-msg") || "Olá, gostaria de mais informações.";
+  el.setAttribute("href","https://wa.me/" + num + "?text=" + encodeURIComponent(msg));
+  el.setAttribute("target","_blank");
+  el.setAttribute("rel","noopener");
+});
+
+/* Mostra os números formatados nos elementos data-wa-text */
+document.querySelectorAll("[data-wa-text]").forEach(el=>{
+  const num = CONFIG.whatsapp[el.getAttribute("data-wa-text")];
+  if(num) el.textContent = formatPhone(num);
+});
+
+/* Liga as redes sociais */
+document.querySelectorAll("[data-social]").forEach(el=>{
+  const url = CONFIG.social[el.getAttribute("data-social")];
+  if(url) el.setAttribute("href",url);
+});
+
+/* Formulário de orçamento: monta a mensagem e abre o WhatsApp do administrador */
+document.getElementById("quoteForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const nome = document.getElementById("fNome").value.trim();
+  const tel = document.getElementById("fTelefone").value.trim();
+  const zona = document.getElementById("fZona").value;
+  const servico = document.getElementById("fServico").value;
+  const msg = document.getElementById("fMensagem").value.trim();
+  const texto =
+    "Pedido de orcamento enviado pelo site Finaliza\n\n" +
+    "Nome: " + nome + "\n" +
+    "Telemovel: " + tel + "\n" +
+    "Localizacao da obra: " + zona + "\n" +
+    "Servico: " + servico + "\n\n" +
+    "Descricao:\n" + msg;
+  window.open("https://wa.me/" + CONFIG.whatsapp.admin + "?text=" + encodeURIComponent(texto),"_blank");
+});
+
+/* Navbar com fundo ao fazer scroll */
+const nav = document.getElementById("nav");
+function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 30); }
+window.addEventListener("scroll", onScroll, {passive:true});
+onScroll();
+
+/* Menu mobile */
+const toggle = document.getElementById("navToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+toggle.addEventListener("click",()=>{
+  const open = mobileMenu.classList.toggle("open");
+  toggle.classList.toggle("open", open);
+  toggle.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
+});
+mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  mobileMenu.classList.remove("open");
+  toggle.classList.remove("open");
+  toggle.setAttribute("aria-expanded","false");
+  document.body.style.overflow = "";
+}));
+
+/* Duplica a faixa marquee para o loop ser contínuo */
+const track = document.getElementById("marqueeTrack");
+track.innerHTML += track.innerHTML;
+
+/* Animações de entrada ao fazer scroll */
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+/* Ano atual no rodapé */
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
