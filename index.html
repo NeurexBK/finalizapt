@@ -380,6 +380,22 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
 /* ============================================================
    TESTEMUNHOS
    ============================================================ */
+/* ANTES E DEPOIS */
+.badepois{background:var(--black);color:var(--white)}
+.badepois .section-head p{color:var(--grey-light)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.ba-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line-dark);background:#000;transition:transform .25s ease,border-color .25s ease}
+.ba-card:hover{transform:translateY(-5px);border-color:rgba(225,29,46,.55)}
+.ba-media{position:relative;display:block;font-size:0}
+.ba-media img{width:100%;display:block}
+.ba-badge{position:absolute;left:14px;z-index:2;font-family:var(--font-head);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 13px;border-radius:999px;color:#fff}
+.ba-badge.antes{top:14px;background:rgba(11,11,13,.82);backdrop-filter:blur(4px)}
+.ba-badge.depois{bottom:14px;background:var(--red)}
+.ba-cap{padding:20px 22px}
+.ba-cap b{display:block;font-family:var(--font-head);font-size:1.05rem}
+.ba-cap small{color:var(--grey-light);font-size:.86rem}
+@media (max-width:760px){.ba-grid{grid-template-columns:1fr}}
+
 .testimonials{background:var(--black);color:var(--white)}
 .testimonials .section-head p{color:var(--grey-light)}
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -542,8 +558,8 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
       <a href="#areas">Áreas</a>
+      <a href="#antes-depois">Antes e Depois</a>
       <a href="#portfolio">Trabalhos</a>
-      <a href="#testemunhos">Clientes</a>
       <a href="#contactos">Contactos</a>
     </nav>
     <a class="nav-cta" data-wa="admin" data-wa-msg="Olá, gostaria de pedir um orçamento.">
@@ -560,6 +576,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
   <a href="#areas">Áreas</a>
+  <a href="#antes-depois">Antes e Depois</a>
   <a href="#portfolio">Trabalhos</a>
   <a href="#testemunhos">Clientes</a>
   <a href="#contactos">Contactos</a>
@@ -592,10 +609,9 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
         </div>
       </div>
       <div class="hero-visual reveal reveal-d2">
-        <!-- Fotografia de banco de imagens (Unsplash, uso livre). Pode ser trocada
-             por uma fotografia real de obra: basta substituir assets/hero.jpg -->
+        <!-- Fotografia real de um apartamento remodelado pela empresa -->
         <div class="hero-card">
-          <img class="hero-card-art" src="assets/hero.jpg" alt="Preparação do projeto de uma remodelação">
+          <img class="hero-card-art" src="assets/quarto-1.jpg" alt="Quarto de apartamento remodelado, com pavimento e pintura novos">
           <div class="hero-card-body">
             <span class="hero-card-tag">Especialidade</span>
             <h3>Remodelação de Apartamentos</h3>
@@ -631,9 +647,9 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
   <div class="container">
     <div class="about-grid">
       <div class="about-text reveal">
-        <span class="eyebrow">A nossa história</span>
-        <h2>De pai para filho, o mesmo compromisso com a obra bem feita.</h2>
-        <p>A Finaliza nasceu quando um pedreiro com <strong>40 anos de profissão</strong> desafiou o filho a administrar um novo negócio na área da construção civil. O resultado é uma empresa jovem, com um ano de atividade, mas construída sobre décadas de experiência real em obra.</p>
+        <span class="eyebrow">Quem somos</span>
+        <h2>Uma empresa familiar, com o compromisso da obra bem feita.</h2>
+        <p>A Finaliza é uma <strong>empresa familiar</strong> de construção civil. Juntamos décadas de experiência real em obra a uma gestão jovem e próxima, com o mesmo compromisso de sempre: entregar cada trabalho bem feito.</p>
         <p>A nossa equipa é formada por profissionais com vastos anos de ofício, que trabalham como sempre trabalharam: com rigor, brio e respeito pela casa de cada cliente.</p>
         <p>Acreditamos que quem compra ou renova a sua primeira casa merece um parceiro de confiança, com <strong>preços acessíveis</strong> e um acompanhamento próximo do princípio ao fim.</p>
         <div class="about-quote">Tratamos cada obra como se fosse a casa da nossa própria família.</div>
@@ -699,8 +715,8 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
         </a>
       </div>
       <div class="service-featured-visual">
-        <!-- Fotografia de banco de imagens (Unsplash, uso livre); trocar por foto real quando existir -->
-        <img src="assets/destaque.jpg" alt="Sala e cozinha de apartamento remodelado em estilo moderno">
+        <!-- Fotografia real de uma remodelação concluída pela empresa -->
+        <img src="assets/cozinha-depois.jpg" alt="Sala e cozinha equipadas após remodelação completa">
       </div>
     </div>
 
@@ -838,53 +854,66 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;font-weight:700}
   </div>
 </section>
 
+<!-- ANTES E DEPOIS -->
+<section class="section badepois" id="antes-depois">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Antes e depois</span>
+      <h2>A diferença de uma obra bem feita.</h2>
+      <p>Trabalhos reais da nossa equipa, do estado inicial ao resultado final.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card reveal">
+        <div class="ba-media">
+          <img src="assets/antes-depois-fachada.jpg" alt="Fachada de moradia antes e depois da recuperação" loading="lazy">
+          <span class="ba-badge antes">Antes</span>
+          <span class="ba-badge depois">Depois</span>
+        </div>
+        <div class="ba-cap"><b>Recuperação de fachada de moradia</b><small>Reboco, pintura exterior, soco em pedra e telhado</small></div>
+      </div>
+      <div class="ba-card reveal reveal-d1">
+        <div class="ba-media">
+          <img src="assets/antes-depois-cozinha.jpg" alt="Sala e cozinha antes e depois da remodelação" loading="lazy">
+          <span class="ba-badge antes">Antes</span>
+          <span class="ba-badge depois">Depois</span>
+        </div>
+        <div class="ba-cap"><b>Remodelação de sala e cozinha</b><small>Tetos em pladur, pavimento novo e cozinha equipada</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PORTFÓLIO -->
 <section class="section portfolio" id="portfolio">
   <div class="container">
     <div class="portfolio-head">
       <div class="section-head reveal">
-        <span class="eyebrow">O que fazemos</span>
+        <span class="eyebrow">Trabalhos reais</span>
         <h2>Obras que falam por nós.</h2>
-        <p>Exemplos do tipo de obras que realizamos. Veja as fotografias e os vídeos dos nossos trabalhos na página de Facebook.</p>
+        <p>Alguns dos nossos trabalhos concluídos. Veja muitas mais fotografias e vídeos na nossa página de Facebook.</p>
       </div>
       <a class="btn btn-dark reveal" data-social="facebook" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1a3.5 3.5 0 0 0-3.7 3.8V11H8.5v3h2.3v7Z"/></svg>
         Ver no Facebook
       </a>
     </div>
-    <!-- Fotografias de banco de imagens (Unsplash, licença de uso livre).
-         Para usar fotografias reais dos trabalhos publicados no Facebook,
-         basta substituir os ficheiros em assets/obra-01.jpg a obra-06.jpg -->
+    <!-- Fotografias reais dos trabalhos da empresa (pasta assets).
+         Para acrescentar mais, adicione novos .work-item com as fotos do Facebook. -->
     <div class="portfolio-grid">
       <div class="work-item reveal">
-        <img class="work-photo" src="assets/obra-01.jpg" alt="Sala de apartamento remodelado em estilo moderno" loading="lazy">
-        <span class="work-tag">Remodelação</span>
-        <div class="work-label"><b>Remodelação completa de apartamentos</b><small>Salas e espaços de estar</small></div>
+        <img class="work-photo" src="assets/quarto-2.jpg" alt="Quarto remodelado com pavimento flutuante e pintura nova" loading="lazy">
+        <span class="work-tag">Interiores</span>
+        <div class="work-label"><b>Quartos e apartamentos</b><small>Pintura, pavimentos e acabamentos</small></div>
       </div>
       <div class="work-item reveal reveal-d1">
-        <img class="work-photo" src="assets/obra-02.jpg" alt="Cozinha moderna em tons de branco e preto" loading="lazy">
-        <span class="work-tag">Cozinhas</span>
-        <div class="work-label"><b>Cozinhas modernas e funcionais</b><small>Móveis, bancadas e iluminação</small></div>
+        <img class="work-photo" src="assets/telhado.jpg" alt="Aplicação de telha cerâmica nova num telhado" loading="lazy">
+        <span class="work-tag">Coberturas</span>
+        <div class="work-label"><b>Telhados e coberturas</b><small>Telha nova, remates e impermeabilização</small></div>
       </div>
       <div class="work-item reveal reveal-d2">
-        <img class="work-photo" src="assets/obra-03.jpg" alt="Casa de banho renovada com base de duche em vidro" loading="lazy">
-        <span class="work-tag">Casas de banho</span>
-        <div class="work-label"><b>Casas de banho renovadas</b><small>Louças, duche e revestimentos</small></div>
-      </div>
-      <div class="work-item reveal">
-        <img class="work-photo" src="assets/obra-04.jpg" alt="Moradia moderna com fachada em madeira e preto" loading="lazy">
-        <span class="work-tag">Moradias</span>
-        <div class="work-label"><b>Moradias e ampliações</b><small>Construção e alteração de fachadas</small></div>
-      </div>
-      <div class="work-item reveal reveal-d1">
-        <img class="work-photo" src="assets/obra-05.jpg" alt="Equipa de obra num estaleiro de construção" loading="lazy">
-        <span class="work-tag">Construção</span>
-        <div class="work-label"><b>Obra estrutural acompanhada</b><small>Equipa e segurança em obra</small></div>
-      </div>
-      <div class="work-item reveal reveal-d2">
-        <img class="work-photo" src="assets/obra-06.jpg" alt="Escritório renovado com divisórias em vidro" loading="lazy">
-        <span class="work-tag">Comercial</span>
-        <div class="work-label"><b>Espaços comerciais e escritórios</b><small>Renovação para empresas</small></div>
+        <img class="work-photo" src="assets/fachada-depois.jpg" alt="Fachada de moradia com pintura e soco em pedra novos" loading="lazy">
+        <span class="work-tag">Exteriores</span>
+        <div class="work-label"><b>Fachadas e pinturas exteriores</b><small>Reboco, pintura e revestimento em pedra</small></div>
       </div>
     </div>
   </div>
